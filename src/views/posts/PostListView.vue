@@ -23,7 +23,7 @@ export default {
       posts_edit: [],
       postId: 0,
       editar: 0,
-      url: 'http://localhost:8001/api'
+      url: 'http://localhost:8000/api'
     }
   },
 
@@ -92,9 +92,24 @@ export default {
           // Reset the form
           this.resetInputs()
           this.allPost()
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Se actualizo la publicaciòn con exito',
+            showConfirmButton: false,
+            timer: 1500
+          })
+          this.editar = 0
         })
         .catch(function (error) {
           console.log(error)
+          Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'no es posible actualizar la publicaciòn',
+            showConfirmButton: false,
+            timer: 1500
+          })
         })
     },
     savePost (a, b, c, d) {
@@ -107,9 +122,24 @@ export default {
         })
         .then((response) => {
           this.allPost()
+          this.resetInputs()
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: '¡Datos guardados èxitosamente!',
+            showConfirmButton: false,
+            timer: 1500
+          })
         })
         .catch(function (error) {
           console.log(error)
+          Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'No es posible guardar los datos',
+            showConfirmButton: false,
+            timer: 1500
+          })
         })
     }
   }

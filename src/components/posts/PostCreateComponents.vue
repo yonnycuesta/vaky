@@ -54,7 +54,7 @@
                       </div>
                       <div class="row">
                  <div class="mb-3">
-                     <label for="description">Descripcion{{editarEvent}}</label>
+                     <label for="description">Descripcion</label>
                         <div class="input-group input-group-outline my-3">
                              <textarea
                     class="form-control"

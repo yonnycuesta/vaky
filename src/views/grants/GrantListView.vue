@@ -14,7 +14,7 @@ export default {
   data () {
     return {
       grants: [],
-      url: 'http://localhost:8001/api'
+      url: 'http://localhost:8000/api'
     }
   },
   mounted () {
